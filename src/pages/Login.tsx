@@ -22,10 +22,9 @@ function Login() {
     console.log("Login attempted with:", { email, password });
     setShowSuccess(true);
 
-    // Redirect to homepage after a short delay
     setTimeout(() => {
       setShowSuccess(false);
-      navigate("/"); // Redirect to homepage
+      navigate("/"); 
     }, 2000);
   };
 
@@ -150,7 +149,7 @@ function Login() {
             </div>
             <button
               type="submit"
-              onClick={handleSubmit} // Call handleSubmit on button click
+              onClick={handleSubmit} 
               className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 px-6 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-500 flex items-center justify-center gap-3 group relative overflow-hidden transform hover:scale-105"
             >
               <UserCircle2 className="w-5 h-5" />
