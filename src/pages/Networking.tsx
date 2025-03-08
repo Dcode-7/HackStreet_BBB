@@ -21,7 +21,12 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { useToast } from "@/components/ui/use-toast";
@@ -67,7 +72,8 @@ const events = [
     time: "6:00 PM - 8:00 PM",
     location: "Virtual",
     attendees: 78,
-    description: "Connect with fellow freelancers and share experiences in this virtual networking event.",
+    description:
+      "Connect with fellow freelancers and share experiences in this virtual networking event.",
   },
   {
     id: 2,
@@ -76,7 +82,8 @@ const events = [
     time: "9:00 AM - 5:00 PM",
     location: "Convention Center, New York",
     attendees: 250,
-    description: "A two-day conference focused on the future of independent work and the gig economy.",
+    description:
+      "A two-day conference focused on the future of independent work and the gig economy.",
   },
   {
     id: 3,
@@ -85,7 +92,8 @@ const events = [
     time: "12:00 PM - 1:30 PM",
     location: "Virtual",
     attendees: 120,
-    description: "Special webinar featuring successful women in tech sharing their career journeys.",
+    description:
+      "Special webinar featuring successful women in tech sharing their career journeys.",
   },
 ];
 
@@ -99,7 +107,8 @@ const courses = [
     rating: 4.8,
     enrolled: 1245,
     price: "$149",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y29kaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+    image:
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y29kaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
   },
   {
     id: 2,
@@ -110,7 +119,8 @@ const courses = [
     rating: 4.6,
     enrolled: 890,
     price: "$99",
-    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YnVzaW5lc3N8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    image:
+      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YnVzaW5lc3N8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
   },
   {
     id: 3,
@@ -121,7 +131,8 @@ const courses = [
     rating: 4.9,
     enrolled: 2150,
     price: "$199",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFya2V0aW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFya2V0aW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
   },
 ];
 
@@ -172,7 +183,8 @@ const grants = [
     amount: "$5,000 - $25,000",
     deadline: "June 30, 2023",
     eligibility: "Women-owned businesses operating for at least 1 year",
-    description: "Provides financial support to women entrepreneurs looking to scale their business.",
+    description:
+      "Provides financial support to women entrepreneurs looking to scale their business.",
   },
   {
     id: 2,
@@ -181,7 +193,8 @@ const grants = [
     amount: "Up to $10,000",
     deadline: "July 15, 2023",
     eligibility: "Freelancers in creative industries with innovative projects",
-    description: "Supports innovative projects in design, media, and other creative fields.",
+    description:
+      "Supports innovative projects in design, media, and other creative fields.",
   },
   {
     id: 3,
@@ -190,7 +203,8 @@ const grants = [
     amount: "$15,000 - $50,000",
     deadline: "August 1, 2023",
     eligibility: "Women and minority-owned tech startups",
-    description: "Aims to increase diversity in the tech industry by supporting underrepresented founders.",
+    description:
+      "Aims to increase diversity in the tech industry by supporting underrepresented founders.",
   },
 ];
 
@@ -211,7 +225,8 @@ const Networking = () => {
   const handleEventRegistration = (eventId: number) => {
     toast({
       title: "Registration Successful",
-      description: "You have been registered for the event. Details will be sent to your email.",
+      description:
+        "You have been registered for the event. Details will be sent to your email.",
       duration: 5000,
     });
   };
@@ -219,7 +234,8 @@ const Networking = () => {
   const handleCourseEnrollment = (courseId: number) => {
     toast({
       title: "Enrollment Pending",
-      description: "Your course enrollment is being processed. You'll receive confirmation soon.",
+      description:
+        "Your course enrollment is being processed. You'll receive confirmation soon.",
       duration: 5000,
     });
   };
@@ -236,7 +252,8 @@ const Networking = () => {
   const handleGrantApplication = (grantId: number) => {
     toast({
       title: "Application Started",
-      description: "You've started an application. Complete all required information before the deadline.",
+      description:
+        "You've started an application. Complete all required information before the deadline.",
       duration: 5000,
     });
   };
@@ -251,11 +268,16 @@ const Networking = () => {
       >
         <h1 className="text-3xl font-bold">Networking & Mentorship</h1>
         <p className="text-muted-foreground">
-          Connect with mentors, attend events, develop skills, and engage with the community.
+          Connect with mentors, attend events, develop skills, and engage with
+          the community.
         </p>
       </motion.div>
 
-      <Tabs defaultValue={activeTab} onValueChange={setActiveTab} className="w-full">
+      <Tabs
+        defaultValue={activeTab}
+        onValueChange={setActiveTab}
+        className="w-full"
+      >
         <TabsList className="grid grid-cols-3 md:grid-cols-5 mb-4">
           <TabsTrigger value="mentorship">Mentorship</TabsTrigger>
           <TabsTrigger value="events">Events</TabsTrigger>
@@ -290,11 +312,16 @@ const Networking = () => {
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {mentors.map((mentor) => (
-              <Card key={mentor.id} className="overflow-hidden hover:border-primary/50 transition-all">
+              <Card
+                key={mentor.id}
+                className="overflow-hidden hover:border-primary/50 transition-all"
+              >
                 <CardHeader className="p-0">
                   <div className="relative h-32 bg-gradient-to-r from-primary/20 to-primary/10">
                     {mentor.available && (
-                      <Badge className="absolute top-2 right-2 bg-green-500">Available</Badge>
+                      <Badge className="absolute top-2 right-2 bg-green-500">
+                        Available
+                      </Badge>
                     )}
                   </div>
                   <div className="px-6 pt-0 pb-4 -mt-12 flex flex-col items-center">
@@ -305,13 +332,17 @@ const Networking = () => {
                         className="h-full w-full object-cover"
                       />
                     </div>
-                    <CardTitle className="mt-2 text-center">{mentor.name}</CardTitle>
+                    <CardTitle className="mt-2 text-center">
+                      {mentor.name}
+                    </CardTitle>
                     <CardDescription className="text-center">
                       {mentor.title}
                     </CardDescription>
                     <div className="flex items-center mt-1">
                       <span className="text-amber-500 mr-1">★</span>
-                      <span className="text-sm font-medium">{mentor.rating}</span>
+                      <span className="text-sm font-medium">
+                        {mentor.rating}
+                      </span>
                       <span className="text-muted-foreground text-xs ml-1">
                         ({mentor.reviews} reviews)
                       </span>
@@ -321,7 +352,11 @@ const Networking = () => {
                 <div className="px-6 py-3 border-t">
                   <div className="flex flex-wrap gap-1 mb-3">
                     {mentor.expertise.map((skill, index) => (
-                      <Badge key={index} variant="outline" className="bg-primary/5">
+                      <Badge
+                        key={index}
+                        variant="outline"
+                        className="bg-primary/5"
+                      >
                         {skill}
                       </Badge>
                     ))}
@@ -331,7 +366,11 @@ const Networking = () => {
                       variant="outline"
                       size="sm"
                       className="flex-1"
-                      onClick={() => setSelectedMentor(mentor.id === selectedMentor ? null : mentor.id)}
+                      onClick={() =>
+                        setSelectedMentor(
+                          mentor.id === selectedMentor ? null : mentor.id
+                        )
+                      }
                     >
                       View Profile
                     </Button>
@@ -349,9 +388,7 @@ const Networking = () => {
           </div>
 
           <div className="flex justify-center mt-6">
-            <Button variant="outline">
-              Browse All Mentors
-            </Button>
+            <Button variant="outline">Browse All Mentors</Button>
           </div>
         </TabsContent>
 
@@ -381,38 +418,43 @@ const Networking = () => {
 
           <div className="space-y-4">
             {events.map((event) => (
-              <Card 
-                key={event.id} 
+              <Card
+                key={event.id}
                 className="overflow-hidden border hover:border-primary/50 transition-all"
               >
                 <div className="flex flex-col md:flex-row">
                   <div className="md:w-1/4 p-6 bg-primary/10 flex flex-col justify-center items-center text-center">
-                    <div className="text-2xl font-bold">{event.date.split(",")[0]}</div>
+                    <div className="text-2xl font-bold">
+                      {event.date.split(",")[0]}
+                    </div>
                     <div className="text-muted-foreground">{event.time}</div>
                     <Badge className="mt-2">{event.location}</Badge>
                   </div>
                   <div className="md:w-3/4 p-6">
                     <div className="flex flex-col md:flex-row justify-between">
                       <div>
-                        <h3 className="text-xl font-bold mb-2">{event.title}</h3>
-                        <p className="text-muted-foreground mb-4">{event.description}</p>
+                        <h3 className="text-xl font-bold mb-2">
+                          {event.title}
+                        </h3>
+                        <p className="text-muted-foreground mb-4">
+                          {event.description}
+                        </p>
                       </div>
                       <div className="flex items-start mt-2 md:mt-0">
-                        <Badge variant="outline" className="bg-primary/5 text-sm">
+                        <Badge
+                          variant="outline"
+                          className="bg-primary/5 text-sm"
+                        >
                           {event.attendees} Attending
                         </Badge>
                       </div>
                     </div>
                     <div className="flex flex-col xs:flex-row gap-2 mt-4">
-                      <Button 
-                        size="sm" 
-                        variant="outline" 
-                        className="flex-1"
-                      >
+                      <Button size="sm" variant="outline" className="flex-1">
                         Add to Calendar
                       </Button>
-                      <Button 
-                        size="sm" 
+                      <Button
+                        size="sm"
                         className="flex-1"
                         onClick={() => handleEventRegistration(event.id)}
                       >
@@ -426,21 +468,22 @@ const Networking = () => {
           </div>
 
           <div className="mt-6">
-            <CardContent 
-              title="Host Your Own Event" 
+            <CardContent
+              title="Host Your Own Event"
               className="bg-primary/5 border"
             >
               <div className="flex flex-col md:flex-row items-center gap-4">
                 <div className="md:w-2/3">
-                  <h3 className="text-lg font-bold">Host Your Own Networking Event</h3>
+                  <h3 className="text-lg font-bold">
+                    Host Your Own Networking Event
+                  </h3>
                   <p className="text-muted-foreground mt-1">
-                    Create and host virtual or in-person networking events for the community.
+                    Create and host virtual or in-person networking events for
+                    the community.
                   </p>
                 </div>
                 <div className="md:w-1/3 flex justify-end">
-                  <Button>
-                    Create Event
-                  </Button>
+                  <Button>Create Event</Button>
                 </div>
               </div>
             </CardContent>
@@ -473,7 +516,10 @@ const Networking = () => {
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {courses.map((course) => (
-              <Card key={course.id} className="overflow-hidden hover:border-primary/50 transition-all">
+              <Card
+                key={course.id}
+                className="overflow-hidden hover:border-primary/50 transition-all"
+              >
                 <div className="relative h-48 overflow-hidden">
                   <img
                     src={course.image}
@@ -498,7 +544,7 @@ const Networking = () => {
                   </div>
                   <div className="flex justify-between items-center">
                     <div className="text-lg font-bold">{course.price}</div>
-                    <Button 
+                    <Button
                       onClick={() => handleCourseEnrollment(course.id)}
                       size="sm"
                     >
@@ -511,32 +557,31 @@ const Networking = () => {
           </div>
 
           <div className="mt-6 grid gap-6 md:grid-cols-2">
-            <CardContent 
-              title="Skill Path" 
-              className="border bg-primary/5"
-            >
+            <CardContent title="Skill Path" className="border bg-primary/5">
               <div className="flex items-center gap-3 mb-4">
                 <div className="bg-primary/20 p-3 rounded-full">
                   <GraduationCap className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-bold">Skill Path: Freelance Web Developer</h3>
+                  <h3 className="font-bold">
+                    Skill Path: Freelance Web Developer
+                  </h3>
                   <p className="text-sm text-muted-foreground">
-                    A curated learning path to become a successful freelance web developer
+                    A curated learning path to become a successful freelance web
+                    developer
                   </p>
                 </div>
               </div>
               <Progress value={35} className="mb-2" />
-              <div className="text-sm text-right text-muted-foreground">4 of 12 courses completed</div>
+              <div className="text-sm text-right text-muted-foreground">
+                4 of 12 courses completed
+              </div>
               <Button variant="outline" className="w-full mt-4">
                 Continue Learning
               </Button>
             </CardContent>
 
-            <CardContent 
-              title="Certifications" 
-              className="border bg-primary/5"
-            >
+            <CardContent title="Certifications" className="border bg-primary/5">
               <div className="flex items-center gap-3 mb-4">
                 <div className="bg-primary/20 p-3 rounded-full">
                   <Award className="h-6 w-6 text-primary" />
@@ -544,13 +589,12 @@ const Networking = () => {
                 <div>
                   <h3 className="font-bold">Certifications Directory</h3>
                   <p className="text-sm text-muted-foreground">
-                    Browse industry-recognized certifications to boost your credentials
+                    Browse industry-recognized certifications to boost your
+                    credentials
                   </p>
                 </div>
               </div>
-              <Button className="w-full mt-4">
-                Browse Certifications
-              </Button>
+              <Button className="w-full mt-4">Browse Certifications</Button>
             </CardContent>
           </div>
         </TabsContent>
@@ -558,10 +602,7 @@ const Networking = () => {
         <TabsContent value="community" className="space-y-6">
           <div className="grid gap-6 md:grid-cols-3">
             <div className="md:col-span-2">
-              <CardContent 
-                title="Community Forum" 
-                className="border h-full"
-              >
+              <CardContent title="Community Forum" className="border h-full">
                 <div className="flex justify-between items-center mb-6">
                   <h3 className="text-lg font-bold">Community Forum</h3>
                   <Button size="sm">
@@ -572,8 +613,8 @@ const Networking = () => {
 
                 <div className="space-y-4">
                   {forumTopics.map((topic) => (
-                    <div 
-                      key={topic.id} 
+                    <div
+                      key={topic.id}
                       className="flex flex-col border rounded-md p-4 hover:border-primary/50 transition-all cursor-pointer"
                     >
                       <div className="flex justify-between mb-2">
@@ -591,7 +632,11 @@ const Networking = () => {
                       </div>
                       <div className="flex flex-wrap gap-1">
                         {topic.tags.map((tag, index) => (
-                          <Badge key={index} variant="outline" className="bg-primary/5 text-xs">
+                          <Badge
+                            key={index}
+                            variant="outline"
+                            className="bg-primary/5 text-xs"
+                          >
                             {tag}
                           </Badge>
                         ))}
@@ -601,40 +646,35 @@ const Networking = () => {
                 </div>
 
                 <div className="flex justify-center mt-6">
-                  <Button variant="outline">
-                    View All Topics
-                  </Button>
+                  <Button variant="outline">View All Topics</Button>
                 </div>
               </CardContent>
             </div>
 
             <div>
-              <CardContent 
-                title="Ask the Community" 
-                className="border mb-6"
-              >
+              <CardContent title="Ask the Community" className="border mb-6">
                 <h3 className="text-lg font-bold mb-4">Ask the Community</h3>
                 <form onSubmit={handleForumPost} className="space-y-4">
                   <div>
                     <Label htmlFor="question-title">Question Title</Label>
-                    <Input 
-                      id="question-title" 
+                    <Input
+                      id="question-title"
                       placeholder="What's your question about?"
                       className="mt-1"
                     />
                   </div>
                   <div>
                     <Label htmlFor="question-body">Details</Label>
-                    <textarea 
+                    <textarea
                       id="question-body"
-                      className="w-full min-h-[120px] rounded-md border border-input p-3 mt-1" 
+                      className="w-full min-h-[120px] rounded-md border border-input p-3 mt-1"
                       placeholder="Provide more details about your question..."
                     />
                   </div>
                   <div>
                     <Label htmlFor="question-tags">Tags</Label>
-                    <Input 
-                      id="question-tags" 
+                    <Input
+                      id="question-tags"
                       placeholder="e.g., finance, clients, tools"
                       className="mt-1"
                     />
@@ -645,8 +685,8 @@ const Networking = () => {
                 </form>
               </CardContent>
 
-              <CardContent 
-                title="Women-Focused Groups" 
+              <CardContent
+                title="Women-Focused Groups"
                 className="border bg-primary/5"
               >
                 <div className="flex items-center gap-3 mb-4">
@@ -660,9 +700,7 @@ const Networking = () => {
                     </p>
                   </div>
                 </div>
-                <Button className="w-full mt-2">
-                  Browse Communities
-                </Button>
+                <Button className="w-full mt-2">Browse Communities</Button>
               </CardContent>
             </div>
           </div>
@@ -681,16 +719,14 @@ const Networking = () => {
               </div>
             </div>
             <div className="flex gap-2">
-              <Button size="sm">
-                Eligibility Check
-              </Button>
+              <Button size="sm">Eligibility Check</Button>
             </div>
           </div>
 
           <div className="space-y-4">
             {grants.map((grant) => (
-              <Card 
-                key={grant.id} 
+              <Card
+                key={grant.id}
                 className="overflow-hidden hover:border-primary/50 transition-all"
               >
                 <div className="p-6">
@@ -707,27 +743,26 @@ const Networking = () => {
                       </Badge>
                     </div>
                   </div>
-                  
+
                   <div className="mt-4">
                     <p className="mb-2">{grant.description}</p>
                     <div className="bg-primary/5 rounded-md p-3 mt-2">
                       <div className="text-sm">
-                        <span className="font-medium">Eligibility:</span> {grant.eligibility}
+                        <span className="font-medium">Eligibility:</span>{" "}
+                        {grant.eligibility}
                       </div>
                       <div className="text-sm mt-1">
-                        <span className="font-medium">Deadline:</span> {grant.deadline}
+                        <span className="font-medium">Deadline:</span>{" "}
+                        {grant.deadline}
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="mt-4 flex flex-col xs:flex-row gap-2">
-                    <Button 
-                      variant="outline" 
-                      className="flex-1"
-                    >
+                    <Button variant="outline" className="flex-1">
                       View Details
                     </Button>
-                    <Button 
+                    <Button
                       className="flex-1"
                       onClick={() => handleGrantApplication(grant.id)}
                     >
@@ -739,33 +774,31 @@ const Networking = () => {
             ))}
           </div>
 
-          <CardContent 
-            title="Grant Assistance" 
-            className="border bg-primary/5"
-          >
+          <CardContent title="Grant Assistance" className="border bg-primary/5">
             <div className="flex flex-col md:flex-row items-center gap-4">
               <div className="md:w-2/3">
-                <h3 className="text-lg font-bold">Grant Application Assistance</h3>
+                <h3 className="text-lg font-bold">
+                  Grant Application Assistance
+                </h3>
                 <p className="text-muted-foreground mt-1">
-                  Get help with your grant applications from experienced mentors.
+                  Get help with your grant applications from experienced
+                  mentors.
                 </p>
               </div>
               <div className="md:w-1/3 flex justify-end">
-                <Button>
-                  Request Assistance
-                </Button>
+                <Button>Request Assistance</Button>
               </div>
             </div>
           </CardContent>
 
           <div className="grid gap-6 md:grid-cols-2">
-            <CardContent 
-              title="Application Tips" 
-              className="border"
-            >
+            <CardContent title="Application Tips" className="border">
               <h3 className="text-lg font-bold mb-4">Grant Application Tips</h3>
               <ul className="space-y-2 list-disc pl-5">
-                <li>Start your application early - at least 2 weeks before the deadline</li>
+                <li>
+                  Start your application early - at least 2 weeks before the
+                  deadline
+                </li>
                 <li>Carefully read eligibility requirements before applying</li>
                 <li>Prepare your business documentation in advance</li>
                 <li>Be specific about how you'll use the funds</li>
@@ -773,23 +806,30 @@ const Networking = () => {
               </ul>
             </CardContent>
 
-            <CardContent 
-              title="Upcoming Webinars" 
-              className="border"
-            >
+            <CardContent title="Upcoming Webinars" className="border">
               <h3 className="text-lg font-bold mb-4">Upcoming Webinars</h3>
               <div className="space-y-3">
                 <div className="rounded-md border p-3">
                   <div className="font-medium">Grant Writing Workshop</div>
-                  <div className="text-sm text-muted-foreground">May 12, 2023 • 2:00 PM EST</div>
+                  <div className="text-sm text-muted-foreground">
+                    May 12, 2023 • 2:00 PM EST
+                  </div>
                 </div>
                 <div className="rounded-md border p-3">
-                  <div className="font-medium">Funding for Creative Entrepreneurs</div>
-                  <div className="text-sm text-muted-foreground">May 18, 2023 • 1:00 PM EST</div>
+                  <div className="font-medium">
+                    Funding for Creative Entrepreneurs
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    May 18, 2023 • 1:00 PM EST
+                  </div>
                 </div>
                 <div className="rounded-md border p-3">
-                  <div className="font-medium">Small Business Loans vs. Grants</div>
-                  <div className="text-sm text-muted-foreground">May 25, 2023 • 11:00 AM EST</div>
+                  <div className="font-medium">
+                    Small Business Loans vs. Grants
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    May 25, 2023 • 11:00 AM EST
+                  </div>
                 </div>
               </div>
             </CardContent>

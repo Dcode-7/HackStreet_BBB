@@ -1,262 +1,94 @@
-
 import React from "react";
 import { motion } from "framer-motion";
-import { CardContent, StatCard, TabContent } from "@/components/ui/card-content";
-import {
-  BarChart3,
-  DollarSign,
-  Calendar,
-  FileText,
-  Users,
-  ArrowRight,
-  Plus,
-  TrendingUp,
-  CreditCard,
-  Clock,
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { 
-  ResponsiveContainer, 
-  BarChart, 
-  Bar, 
-  XAxis, 
-  YAxis, 
-  CartesianGrid, 
-  Tooltip, 
-  Legend,
-  LineChart,
-  Line,
-  PieChart,
-  Pie,
-  Cell
-} from "recharts";
+import { Bell, MapPin, Users, Heart } from "lucide-react";
+import TypewriterEffect from "./TypeWriterEffect";
+import Navbar from "./Navbar";
 
-// Sample data for charts
-const monthlyData = [
-  { name: "Jan", income: 3200, expenses: 1800 },
-  { name: "Feb", income: 3800, expenses: 2100 },
-  { name: "Mar", income: 4100, expenses: 1950 },
-  { name: "Apr", income: 4500, expenses: 2300 },
-  { name: "May", income: 4300, expenses: 2100 },
-  { name: "Jun", income: 5200, expenses: 2400 }
-];
-
-const projectData = [
-  { name: "Design", value: 35 },
-  { name: "Development", value: 40 },
-  { name: "Marketing", value: 15 },
-  { name: "Consulting", value: 10 }
-];
-
-const COLORS = ["#8884d8", "#82ca9d", "#ffc658", "#ff8042", "#0088fe"];
-
-const Index = () => {
+function Home() {
   return (
-    <div className="space-y-6">
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.3 }}
-        className="flex flex-col gap-2"
-      >
-        <h1 className="text-3xl font-bold">Dashboard</h1>
-        <p className="text-muted-foreground">
-          Welcome back! Here's an overview of your gig work.
-        </p>
-      </motion.div>
+    <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
+      {/* Navbar */}
+      <Navbar />
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-        <StatCard
-          title="This Month Earnings"
-          value="$4,256.78"
-          icon={<DollarSign className="h-5 w-5" />}
-          trend={{ value: 12.5, positive: true }}
-        />
-        <StatCard
-          title="Pending Invoices"
-          value="$1,876.22"
-          icon={<FileText className="h-5 w-5" />}
-          trend={{ value: 2.4, positive: false }}
-        />
-        <StatCard
-          title="Active Projects"
-          value="6"
-          icon={<Clock className="h-5 w-5" />}
-        />
-        <StatCard
-          title="Upcoming Deadlines"
-          value="3"
-          icon={<Calendar className="h-5 w-5" />}
-        />
-      </div>
+      {/* Prevent content overlap */}
+      <div className="pt-14">
+        {/* Hero Section */}
+        <div className="container mx-auto px-4 sm:px-6 py-10 sm:py-20">
+          <div className="flex flex-col items-center text-center">
+            <motion.h1
+              className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 text-primary"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              Empowering Gig Workers
+            </motion.h1>
 
-      <div className="grid gap-6 lg:grid-cols-3">
-        <div className="lg:col-span-2">
-          <CardContent
-            title="Revenue Overview"
-            icon={<BarChart3 className="h-5 w-5" />}
-            action={
-              <Button variant="outline" size="sm">
-                View All
-              </Button>
-            }
-            className="h-[350px]"
-          >
-            <div className="h-[260px]">
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart
-                  data={monthlyData}
-                  margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+            <TypewriterEffect />
+
+            <motion.p
+              className="text-base sm:text-lg text-muted-foreground max-w-2xl mb-8 sm:mb-10 px-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+            >
+              Own Your Hustle, Secure Your Future, Thrive on Your Terms!
+            </motion.p>
+
+            <motion.button
+              className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-full flex items-center gap-2 text-lg font-semibold shadow-lg transition-all"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Download Now
+              <Heart className="w-5 h-5" />
+            </motion.button>
+
+            {/* Features Grid */}
+            <motion.div
+              className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mt-12 sm:mt-20 w-full max-w-4xl"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 }}
+            >
+              {[
+                {
+                  icon: Bell,
+                  title: "Emergency Alerts",
+                  desc: "Quick access to emergency services",
+                },
+                {
+                  icon: MapPin,
+                  title: "Location Tracking",
+                  desc: "Real-time location sharing with trusted contacts",
+                },
+                {
+                  icon: Users,
+                  title: "Support Network",
+                  desc: "Connect with your safety circle",
+                },
+              ].map(({ icon: Icon, title, desc }, index) => (
+                <motion.div
+                  key={title}
+                  className="glass-card p-6 rounded-xl shadow-lg"
+                  whileHover={{ y: -5 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.8 + index * 0.2 }}
                 >
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis dataKey="name" />
-                  <YAxis />
-                  <Tooltip 
-                    formatter={(value) => [`$${value}`, undefined]}
-                    contentStyle={{ backgroundColor: 'var(--background)', border: '1px solid var(--border)' }}
-                  />
-                  <Legend />
-                  <Bar dataKey="income" name="Income" fill="#8884d8" />
-                  <Bar dataKey="expenses" name="Expenses" fill="#82ca9d" />
-                </BarChart>
-              </ResponsiveContainer>
-            </div>
-          </CardContent>
-        </div>
-
-        <CardContent
-          title="Project Distribution"
-          icon={<Plus className="h-5 w-5" />}
-          className="h-[350px]"
-        >
-          <div className="h-[260px] flex flex-col justify-center">
-            <ResponsiveContainer width="100%" height="100%">
-              <PieChart>
-                <Pie
-                  data={projectData}
-                  cx="50%"
-                  cy="50%"
-                  labelLine={false}
-                  label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
-                  outerRadius={80}
-                  fill="#8884d8"
-                  dataKey="value"
-                >
-                  {projectData.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                  ))}
-                </Pie>
-                <Tooltip 
-                  formatter={(value) => [`${value}%`, undefined]}
-                  contentStyle={{ backgroundColor: 'var(--background)', border: '1px solid var(--border)' }}
-                />
-              </PieChart>
-            </ResponsiveContainer>
+                  <Icon className="w-10 h-10 text-primary mb-4" />
+                  <h3 className="text-xl font-semibold mb-2 text-primary">
+                    {title}
+                  </h3>
+                  <p className="text-muted-foreground">{desc}</p>
+                </motion.div>
+              ))}
+            </motion.div>
           </div>
-        </CardContent>
-      </div>
-
-      <div className="grid gap-6 md:grid-cols-2">
-        <TabContent
-          tabs={[
-            {
-              label: "Upcoming Tasks",
-              content: (
-                <div className="space-y-3">
-                  {[1, 2, 3].map((i) => (
-                    <div
-                      key={i}
-                      className="flex items-center justify-between rounded-md border p-3"
-                    >
-                      <div>
-                        <div className="font-medium">
-                          Project Milestone {i}
-                        </div>
-                        <div className="text-sm text-muted-foreground">
-                          Due in {i} day{i > 1 ? "s" : ""}
-                        </div>
-                      </div>
-                      <Button size="sm" variant="outline">
-                        Details
-                      </Button>
-                    </div>
-                  ))}
-                </div>
-              ),
-            },
-            {
-              label: "Recent Activity",
-              content: (
-                <div className="space-y-3">
-                  {[1, 2, 3].map((i) => (
-                    <div
-                      key={i}
-                      className="flex items-center justify-between rounded-md border p-3"
-                    >
-                      <div>
-                        <div className="font-medium">
-                          Invoice #{1000 + i} Paid
-                        </div>
-                        <div className="text-sm text-muted-foreground">
-                          {i} hour{i > 1 ? "s" : ""} ago
-                        </div>
-                      </div>
-                      <div className="text-green-500 font-medium">
-                        +${i * 500}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              ),
-            },
-          ]}
-        />
-
-        <TabContent
-          tabs={[
-            {
-              label: "Client Activity",
-              content: (
-                <div className="space-y-3">
-                  {[1, 2, 3].map((i) => (
-                    <div
-                      key={i}
-                      className="flex items-center gap-3 rounded-md border p-3"
-                    >
-                      <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
-                        <Users className="h-5 w-5 text-primary" />
-                      </div>
-                      <div>
-                        <div className="font-medium">Client {i}</div>
-                        <div className="text-sm text-muted-foreground">
-                          Viewed proposal {i} hour{i > 1 ? "s" : ""} ago
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              ),
-            },
-            {
-              label: "Messages",
-              content: (
-                <div className="text-center py-6">
-                  <div className="mx-auto mb-4 h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Users className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="text-lg font-medium">No new messages</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">
-                    When clients message you, they'll appear here
-                  </p>
-                  <Button className="mt-4">Send a Message</Button>
-                </div>
-              ),
-            },
-          ]}
-        />
+        </div>
       </div>
     </div>
   );
-};
+}
 
-export default Index;
+export default Home;

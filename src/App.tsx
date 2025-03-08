@@ -3,7 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
+import HomePage from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Financial from "./pages/Financial";
 import Benefits from "./pages/Benefits";
@@ -16,6 +16,7 @@ import { Header } from "./components/layout/Header";
 import Settings from "./pages/Settings";
 import ProductivityTools from "./pages/ProductivityTools";
 import Profile from "./pages/Profile";
+import Login from "./pages/Login";
 
 const queryClient = new QueryClient();
 
@@ -26,27 +27,39 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <div className="flex h-screen">
-            <Sidebar />
-            <div className="flex flex-1 flex-col">
-              <Header />
-              <main className="flex-1 overflow-y-auto p-6">
-                <Routes>
-                  <Route path="/" element={<Index />} />
-                  <Route path="/financial" element={<Financial />} />
-                  <Route path="/benefits" element={<Benefits />} />
-                  <Route path="/rate-calculator" element={<RateCalculator />} />
-                  <Route path="/clients" element={<Clients />} />
-                  <Route path="/networking" element={<Networking />} />
-                  <Route path="/productivity" element={<ProductivityTools />} />
-                  <Route path="/profile" element={<Profile />} />
-                  <Route path="/settings" element={<Settings />} />
-                  {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-                  <Route path="*" element={<NotFound />} />
-                </Routes>
-              </main>
-            </div>
-          </div>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/login" element={<Login />} />
+            <Route
+              path="/*"
+              element={
+                <div className="flex h-screen">
+                  <Sidebar />
+                  <div className="flex flex-1 flex-col">
+                    <Header />
+                    <main className="flex-1 overflow-y-auto p-6">
+                      <Routes>
+                        <Route path="/financial" element={<Financial />} />
+                        <Route path="/benefits" element={<Benefits />} />
+                        <Route
+                          path="/rate-calculator"
+                          element={<RateCalculator />}
+                        />
+                        <Route path="/clients" element={<Clients />} />
+                        <Route path="/networking" element={<Networking />} />
+                        <Route
+                          path="/productivity"
+                          element={<ProductivityTools />}
+                        />
+                        <Route path="/profile" element={<Profile />} />
+                        <Route path="/settings" element={<Settings />} />
+                      </Routes>
+                    </main>
+                  </div>
+                </div>
+              }
+            />
+          </Routes>
         </BrowserRouter>
       </TooltipProvider>
     </ThemeProvider>

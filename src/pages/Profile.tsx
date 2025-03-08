@@ -7,16 +7,16 @@ import { Textarea } from "@/components/ui/textarea";
 const GigWorkerProfile = () => {
   const [editing, setEditing] = useState(false);
   const [profile, setProfile] = useState({
-    name: "John Doe",
-    bio: "Stand-up comedian with 5+ years of experience.",
-    gigsCompleted: 50,
-    rating: 4.8,
+    name: "Emily Carter",
+    bio: "Stand-up comedian and improv artist with 7+ years of experience.",
+    gigsCompleted: 75,
+    rating: 4.9,
     socialLinks: {
-      website: "https://johndoecomedy.com",
-      instagram: "https://instagram.com/johndoecomedy",
+      website: "https://emilycartercomedy.com",
+      instagram: "https://instagram.com/emilycartercomedy",
     },
     portfolio: [
-      { title: "Comedy Special", link: "https://youtube.com/example" },
+      { title: "Live Comedy Show", link: "https://youtube.com/example" },
     ],
   });
 
@@ -30,7 +30,7 @@ const GigWorkerProfile = () => {
       <div className="flex items-center gap-4">
         <div className="relative">
           <img
-            src="https://plus.unsplash.com/premium_photo-1689530775582-83b8abdb5020?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmFuZG9tJTIwcGVyc29ufGVufDB8fDB8fHww"
+            src="https://plus.unsplash.com/premium_photo-1689551670902-19b441a6afde?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fHww"
             alt="Profile"
             className="w-24 h-24 rounded-full object-cover border-2 border-primary"
           />

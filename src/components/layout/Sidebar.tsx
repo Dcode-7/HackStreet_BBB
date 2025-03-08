@@ -31,7 +31,7 @@ type NavItem = {
 };
 
 const navItems: NavItem[] = [
-  { name: "Dashboard", path: "/", icon: Home },
+  { name: "Home", path: "/", icon: Home },
   { name: "Financial Management", path: "/financial", icon: BarChart3 },
   { name: "Benefits Navigator", path: "/benefits", icon: Heart },
   { name: "Rate Calculator", path: "/rate-calculator", icon: Calculator },
@@ -70,7 +70,7 @@ export function Sidebar({ className }: SidebarProps) {
             transition={{ duration: 0.2 }}
             className="text-xl font-semibold text-primary"
           >
-            Gig Hub
+            Saksham
           </motion.h2>
         )}
         <button
