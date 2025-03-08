@@ -73,8 +73,6 @@ By addressing these critical **pain points**, this platform **ensures sustainabi
 ### **Additional Tools & Libraries**
 
 🛠️ **React Router** – Seamless navigation  
-🛠️ **Zod + Express Validator** – Data validation  
-🛠️ **Stripe** – Secure payment processing  
 🛠️ **Lucide Icons** – Modern UI icons
 
 ---
@@ -91,35 +89,12 @@ cd gig-worker-resource-hub
 ### **2️⃣ Install Dependencies**
 
 ```bash
-# Install frontend packages
-cd frontend
 npm install
-
-# Install backend packages
-cd ../backend
-npm install
-```
-
-### **3️⃣ Set Up Environment Variables**
-
-Create a `.env` file in the `backend` directory with:
-
-```env
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
-STRIPE_SECRET_KEY=your_stripe_key
 ```
 
 ### **4️⃣ Run the Project**
 
 ```bash
-# Start backend
-cd backend
-npm run dev
-
-# Start frontend
-cd ../frontend
 npm run dev
 ```
 
@@ -137,11 +112,3 @@ npm run dev
 ⬜ Networking & Mentorship Hub
 
 ---
-
-## 📞 **Contact & Support**
-
-For questions or contributions, reach out via:  
-📧 **Email:** your-email@example.com  
-📌 **GitHub Issues:** [Open an Issue](https://github.com/your-username/gig-worker-resource-hub/issues)
-
-Happy Freelancing! 🎯🔥
