@@ -1,16 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Bell, MapPin, Users, Heart } from "lucide-react";
-import TypewriterEffect from "./TypeWriterEffect";
+import { Link } from "react-router-dom";
+import TypewriterEffect from "./TypewriterEffect";
 import Navbar from "./Navbar";
 
 function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
-      {/* Navbar */}
       <Navbar />
-
-      {/* Prevent content overlap */}
       <div className="pt-14">
         {/* Hero Section */}
         <div className="container mx-auto px-4 sm:px-6 py-10 sm:py-20">
@@ -34,16 +32,15 @@ function Home() {
             >
               Own Your Hustle, Secure Your Future, Thrive on Your Terms!
             </motion.p>
-
-            <motion.button
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-full flex items-center gap-2 text-lg font-semibold shadow-lg transition-all"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Download Now
-              <Heart className="w-5 h-5" />
-            </motion.button>
-
+            <Link to="/login">
+              <motion.button
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-full flex items-center gap-2 text-lg font-semibold shadow-lg transition-all"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Register Now
+              </motion.button>
+            </Link>
             {/* Features Grid */}
             <motion.div
               className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mt-12 sm:mt-20 w-full max-w-4xl"

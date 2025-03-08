@@ -16,23 +16,17 @@ export const TypewriterEffect = () => {
   useEffect(() => {
     const timeout = setTimeout(
       () => {
-        // Current phrase to work with
         const phrase = phrases[currentPhrase];
 
         if (!isDeleting) {
-          // Add one character to the text
           setCurrentText(phrase.substring(0, currentText.length + 1));
 
-          // If completed typing
           if (currentText.length === phrase.length) {
-            // Wait a bit before deleting
             setTimeout(() => setIsDeleting(true), 1500);
           }
         } else {
-          // Remove one character from the text
           setCurrentText(phrase.substring(0, currentText.length - 1));
 
-          // If deleted all characters
           if (currentText.length === 0) {
             setIsDeleting(false);
             setCurrentPhrase((prev) => (prev + 1) % phrases.length);

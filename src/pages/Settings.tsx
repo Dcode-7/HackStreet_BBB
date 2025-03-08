@@ -10,7 +10,6 @@ const Settings = () => {
   return (
     <div className="space-y-8">
       {" "}
-      {/* Increased spacing between sections */}
       {/* Page Header */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
