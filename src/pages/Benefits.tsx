@@ -1,4 +1,3 @@
-
 import React from "react";
 import { motion } from "framer-motion";
 import { CardContent, TabContent } from "@/components/ui/card-content";
@@ -128,7 +127,8 @@ const Benefits = () => {
                     {
                       name: "Premium Health Plan",
                       premium: "$450/month",
-                      coverage: "Full coverage including vision and specialists",
+                      coverage:
+                        "Full coverage including vision and specialists",
                       rating: 4.8,
                     },
                   ].map((plan, i) => (
@@ -251,7 +251,9 @@ const Benefits = () => {
                           of $10,000 goal
                         </div>
                       </div>
-                      <div className="text-xl font-medium text-primary">35%</div>
+                      <div className="text-xl font-medium text-primary">
+                        35%
+                      </div>
                     </div>
                     <div className="mt-4">
                       <Progress value={35} className="h-2" />
@@ -270,7 +272,9 @@ const Benefits = () => {
                           of $5,000 goal
                         </div>
                       </div>
-                      <div className="text-xl font-medium text-primary">24%</div>
+                      <div className="text-xl font-medium text-primary">
+                        24%
+                      </div>
                     </div>
                     <div className="mt-4">
                       <Progress value={24} className="h-2" />
@@ -281,28 +285,36 @@ const Benefits = () => {
                   </div>
                 </div>
 
-                <div className="rounded-md border p-4">
-                  <h3 className="font-medium">Emergency Fund Calculator</h3>
-                  <p className="mt-1 text-sm text-muted-foreground">
+                <div className="rounded-md border border-gray-300 dark:border-gray-700 p-4 bg-white dark:bg-gray-900 transition-all">
+                  {/* Title */}
+                  <h3 className="font-medium text-gray-900 dark:text-gray-100">
+                    Emergency Fund Calculator
+                  </h3>
+                  <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
                     Our calculator helps you determine how much to save based on
                     your monthly expenses.
                   </p>
+
+                  {/* Inputs Section */}
                   <div className="mt-4 space-y-3">
+                    {/* Monthly Expenses */}
                     <div>
-                      <label className="text-sm font-medium">
+                      <label className="text-sm font-medium text-gray-900 dark:text-gray-100">
                         Monthly Expenses
                       </label>
                       <input
                         type="number"
-                        className="mt-1 w-full rounded-md border p-2"
+                        className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 p-2 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:ring-2 focus:ring-primary focus:border-primary transition-all"
                         placeholder="$3,000"
                       />
                     </div>
+
+                    {/* Months of Coverage */}
                     <div>
-                      <label className="text-sm font-medium">
+                      <label className="text-sm font-medium text-gray-900 dark:text-gray-100">
                         Months of Coverage
                       </label>
-                      <select className="mt-1 w-full rounded-md border p-2">
+                      <select className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 p-2 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 transition-all">
                         <option value="3">3 months</option>
                         <option value="6">6 months</option>
                         <option value="9">9 months</option>
@@ -310,8 +322,12 @@ const Benefits = () => {
                       </select>
                     </div>
                   </div>
+
+                  {/* Calculate Button */}
                   <div className="mt-4">
-                    <Button className="w-full">Calculate Needs</Button>
+                    <Button className="w-full bg-primary text-white dark:bg-primary/80 dark:hover:bg-primary/90 transition-all">
+                      Calculate Needs
+                    </Button>
                   </div>
                 </div>
 

@@ -423,6 +423,7 @@ const Networking = () => {
                 className="overflow-hidden border hover:border-primary/50 transition-all"
               >
                 <div className="flex flex-col md:flex-row">
+                  {/* Event Date & Location Section */}
                   <div className="md:w-1/4 p-6 bg-primary/10 flex flex-col justify-center items-center text-center">
                     <div className="text-2xl font-bold">
                       {event.date.split(",")[0]}
@@ -430,6 +431,8 @@ const Networking = () => {
                     <div className="text-muted-foreground">{event.time}</div>
                     <Badge className="mt-2">{event.location}</Badge>
                   </div>
+
+                  {/* Event Details Section */}
                   <div className="md:w-3/4 p-6">
                     <div className="flex flex-col md:flex-row justify-between">
                       <div>
@@ -449,13 +452,15 @@ const Networking = () => {
                         </Badge>
                       </div>
                     </div>
-                    <div className="flex flex-col xs:flex-row gap-2 mt-4">
-                      <Button size="sm" variant="outline" className="flex-1">
+
+                    {/* Buttons shifted to the right */}
+                    <div className="flex justify-end gap-2 mt-4">
+                      <Button size="sm" variant="outline">
                         Add to Calendar
                       </Button>
                       <Button
                         size="sm"
-                        className="flex-1"
+                        className="bg-primary text-white"
                         onClick={() => handleEventRegistration(event.id)}
                       >
                         Register Now
@@ -758,12 +763,11 @@ const Networking = () => {
                     </div>
                   </div>
 
-                  <div className="mt-4 flex flex-col xs:flex-row gap-2">
-                    <Button variant="outline" className="flex-1">
-                      View Details
-                    </Button>
+                  {/* Buttons aligned to the right */}
+                  <div className="mt-4 flex justify-end gap-2">
+                    <Button variant="outline">View Details</Button>
                     <Button
-                      className="flex-1"
+                      className="bg-primary text-white"
                       onClick={() => handleGrantApplication(grant.id)}
                     >
                       Apply Now
