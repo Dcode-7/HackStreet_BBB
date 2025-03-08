@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    @apply antialiased;
+  }
+
+  body {
+    @apply min-h-screen bg-lilac-50 dark:bg-lilac-900;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white dark:bg-lilac-800 rounded-xl shadow-lg p-6;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better focus styles */
+:focus-visible {
+  @apply outline-none ring-2 ring-lilac-500 ring-offset-2;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-lilac-100 dark:bg-lilac-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-lilac-300 dark:bg-lilac-600 rounded-full;
+}
+
+/* Animations */
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
