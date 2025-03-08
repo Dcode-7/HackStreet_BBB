@@ -1,41 +1,56 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Navigation } from './components/Navigation';
-import { ThemeToggle } from './components/ThemeToggle';
-import { FinancialDashboard } from './components/FinancialDashboard';
-import { Benefits } from './components/Benefits';
-import { RateCalculator } from './components/RateCalculator';
-import { ClientManagement } from './components/ClientManagement';
-import { ProfessionalDevelopment } from './components/ProfessionalDevelopment';
-import { ProjectTimeline } from './components/ProjectTimeline';
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Index from "./pages/Index";
+import NotFound from "./pages/NotFound";
+import Financial from "./pages/Financial";
+import Benefits from "./pages/Benefits";
+import RateCalculator from "./pages/RateCalculator";
+import Clients from "./pages/Clients";
+import Networking from "./pages/Networking";
+import { ThemeProvider } from "./context/ThemeContext";
+import { Sidebar } from "./components/layout/Sidebar";
+import { Header } from "./components/layout/Header";
+import Settings from "./pages/Settings";
+import ProductivityTools from "./pages/ProductivityTools";
+import Profile from "./pages/Profile";
 
-function App() {
-  return (
-    <Router>
-      <div className="min-h-screen bg-lilac-50 dark:bg-lilac-900 text-lilac-900 dark:text-lilac-100 flex">
-        <Navigation />
-        
-        <div className="flex-1">
-          <header className="sticky top-0 z-30 bg-white/80 dark:bg-lilac-900/80 backdrop-blur-sm border-b border-lilac-100 dark:border-lilac-800">
-            <div className="px-4 py-4 flex justify-end items-center">
-              <ThemeToggle />
+const queryClient = new QueryClient();
+
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <ThemeProvider>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <div className="flex h-screen">
+            <Sidebar />
+            <div className="flex flex-1 flex-col">
+              <Header />
+              <main className="flex-1 overflow-y-auto p-6">
+                <Routes>
+                  <Route path="/" element={<Index />} />
+                  <Route path="/financial" element={<Financial />} />
+                  <Route path="/benefits" element={<Benefits />} />
+                  <Route path="/rate-calculator" element={<RateCalculator />} />
+                  <Route path="/clients" element={<Clients />} />
+                  <Route path="/networking" element={<Networking />} />
+                  <Route path="/productivity" element={<ProductivityTools />} />
+                  <Route path="/profile" element={<Profile />} />
+                  <Route path="/settings" element={<Settings />} />
+                  {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </main>
             </div>
-          </header>
+          </div>
+        </BrowserRouter>
+      </TooltipProvider>
+    </ThemeProvider>
+  </QueryClientProvider>
+);
 
-          <main className="p-8">
-            <Routes>
-              <Route path="/" element={<FinancialDashboard />} />
-              <Route path="/benefits" element={<Benefits />} />
-              <Route path="/calculator" element={<RateCalculator />} />
-              <Route path="/clients" element={<ClientManagement />} />
-              <Route path="/development" element={<ProfessionalDevelopment />} />
-              <Route path="/timeline" element={<ProjectTimeline />} />
-            </Routes>
-          </main>
-        </div>
-      </div>
-    </Router>
-  );
-}
-
-export default App
+export default App;
