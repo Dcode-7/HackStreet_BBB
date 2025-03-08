@@ -1,69 +1,147 @@
-# Welcome to your Lovable project
+# 🚀 **Gig Worker Resource Hub**
 
-## Project info
+A **comprehensive web application** designed to **empower gig workers** by providing essential tools for **financial management, benefits access, client interactions, and professional growth**.
 
-**URL**: https://lovable.dev/projects/1086f4ef-7124-4d4f-ad10-d388f7cc5670
+The gig economy is expanding rapidly, but freelancers, independent contractors, and platform-based workers face challenges like **financial instability, lack of benefits, administrative burdens, and resource inaccessibility**.
 
-## How can I edit this code?
+This platform bridges the gap by offering a **centralized, user-friendly** solution tailored to gig workers’ needs.
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🎯 **Key Features**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/1086f4ef-7124-4d4f-ad10-d388f7cc5670) and start prompting.
+### 💰 **Financial Management Dashboard**
 
-Changes made via Lovable will be committed automatically to this repo.
+✅ **Income & Expense Tracking** – Manage finances across multiple platforms  
+✅ **Automated Tax Calculations** – Stay compliant with tax obligations  
+✅ **Custom Financial Reports** – Gain insights for better financial planning
 
-**Use your preferred IDE**
+### 🏥 **Benefits Navigator**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+✅ **Health Insurance Marketplace** – Explore and compare coverage options  
+✅ **Retirement Planning & Insurance** – Plan for long-term financial security  
+✅ **Paid Leave Alternatives** – Access support options for independent workers
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 💵 **Rate Calculator**
 
-Follow these steps:
+✅ **Industry-Specific Rate Benchmarks** – Set fair pricing  
+✅ **Cost-of-Living Adjustments** – Adjust rates based on location  
+✅ **Project Cost Estimation & Negotiation Tools** – Price services effectively
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### 📑 **Client Management System**
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+✅ **Contract Template Library & Invoice Tracking** – Handle paperwork efficiently  
+✅ **Client Communication Portal** – Centralized messaging for collaboration  
+✅ **Project Timeline Visualization** – Organize work history and deadlines
 
-# Step 3: Install the necessary dependencies.
-npm i
+### 📚 **Professional Development Resources**
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+✅ **Skill Development & Certification Pathways** – Enhance career growth  
+✅ **Networking & Mentorship Opportunities** – Connect with industry professionals  
+✅ **Industry-Specific Career Growth Resources** – Find tailored success strategies
+
+### 📆 **Project Status & Timeline Tracker**
+
+✅ **Real-Time Project Updates** – Track work progress at a glance  
+✅ **Task Breakdown & Milestone Tracking** – Stay on top of deadlines  
+✅ **Automated Reminders & Client Logs** – Ensure seamless project management
+
+---
+
+## 🎯 **Objective**
+
+The **Gig Worker Resource Hub** aims to:
+
+✔️ **Centralize essential tools** for freelancers, making it easier to manage finances, benefits, and clients.  
+✔️ **Provide personalized insights** based on work type, industry, and experience level.  
+✔️ **Improve financial stability** through tax guidance, pricing strategies, and expense tracking.  
+✔️ **Support professional growth** with skill-building, networking, and career resources.  
+✔️ **Enhance organization & efficiency** with project tracking, reminders, and administrative tools.
+
+By addressing these critical **pain points**, this platform **ensures sustainability, stability, and growth** in the gig economy.
+
+---
+
+## 🛠️ **Tech Stack**
+
+### **Frontend**
+
+⚡ **React + Vite** – Fast and modern UI  
+⚡ **Tailwind CSS** – Beautiful, responsive design  
+⚡ **Framer Motion** – Smooth animations
+
+### **Additional Tools & Libraries**
+
+🛠️ **React Router** – Seamless navigation  
+🛠️ **Zod + Express Validator** – Data validation  
+🛠️ **Stripe** – Secure payment processing  
+🛠️ **Lucide Icons** – Modern UI icons
+
+---
+
+## 🚀 **Getting Started**
+
+### **1️⃣ Clone the Repository**
+
+```bash
+git clone https://github.com/your-username/gig-worker-resource-hub.git
+cd gig-worker-resource-hub
+```
+
+### **2️⃣ Install Dependencies**
+
+```bash
+# Install frontend packages
+cd frontend
+npm install
+
+# Install backend packages
+cd ../backend
+npm install
+```
+
+### **3️⃣ Set Up Environment Variables**
+
+Create a `.env` file in the `backend` directory with:
+
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+STRIPE_SECRET_KEY=your_stripe_key
+```
+
+### **4️⃣ Run the Project**
+
+```bash
+# Start backend
+cd backend
+npm run dev
+
+# Start frontend
+cd ../frontend
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+🚀 Open [http://localhost:5173](http://localhost:5173) in your browser!
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 📌 **Roadmap**
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+✔️ Financial Management Dashboard  
+✔️ Benefits Navigator  
+✔️ Client Management System  
+⬜ Payment Integration  
+⬜ Project Timeline Tracker  
+⬜ Networking & Mentorship Hub
 
-## What technologies are used for this project?
+---
 
-This project is built with .
+## 📞 **Contact & Support**
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+For questions or contributions, reach out via:  
+📧 **Email:** your-email@example.com  
+📌 **GitHub Issues:** [Open an Issue](https://github.com/your-username/gig-worker-resource-hub/issues)
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/1086f4ef-7124-4d4f-ad10-d388f7cc5670) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+Happy Freelancing! 🎯🔥
